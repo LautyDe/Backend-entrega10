@@ -6,12 +6,6 @@ const productos = new Contenedor("./controllers/productos.json");
 const app = express();
 const PORT = 8080;
 const notFound = { error: "Ruta no encontrada" };
-const admin = require("firebase-admin");
-const serviceAccount = require("./segundaentregaproyectofinal-firebase-adminsdk-uhe53-3e1574fe72.json");
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-});
 
 /* middlewares incorporados */
 app.use(bp.json());

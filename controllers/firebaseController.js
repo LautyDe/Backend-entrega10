@@ -49,3 +49,5 @@ class Firebase {
         });
     }
 }
+
+module.exports = Firebase;
