@@ -14,10 +14,6 @@ const notFound = { error: "Producto no encontrado" };
    internal server error: 500
     */
 
-const numeros = "0123456789";
-const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numYLetras = numeros + letras;
-
 router.post("/", async (req, res) => {
     console.log(`post req recibida con exito`);
     const carrito = {

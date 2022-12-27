@@ -1,5 +1,4 @@
 const admin = require("firebase-admin");
-const { all } = require("../routers");
 
 class Firebase {
     constructor(collection) {

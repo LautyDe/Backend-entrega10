@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const admin = require("firebase-admin");
-const serviceAccount = require("./segundaentregaproyectofinal-firebase-adminsdk-uhe53-3e1574fe72.json");
+const serviceAccount = require("../segundaentregaproyectofinal-firebase-adminsdk-uhe53-3e1574fe72.json");
 
 async function initMongoDB() {
     try {

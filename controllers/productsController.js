@@ -59,7 +59,7 @@ class Contenedor {
                 producto = {
                     id: 1,
                     timestamp: Date.now(),
-                    codigo: codigoRandom(10),
+                    code: codigoRandom(10),
                     ...producto,
                 };
                 arrayProductos.push(producto);
@@ -79,7 +79,7 @@ class Contenedor {
                         producto = {
                             id: 1,
                             timestamp: Date.now(),
-                            codigo: codigoRandom(10),
+                            code: codigoRandom(10),
                             ...producto,
                         };
                     } else {
@@ -88,7 +88,7 @@ class Contenedor {
                         producto = {
                             id: ultimoId + 1,
                             timestamp: Date.now(),
-                            codigo: codigoRandom(10),
+                            code: codigoRandom(10),
                             ...producto,
                         };
                     }
