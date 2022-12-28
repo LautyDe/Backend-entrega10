@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
+const { default: mongoose } = require("mongoose");
 const admin = require("firebase-admin");
 const serviceAccount = require("../segundaentregaproyectofinal-firebase-adminsdk-uhe53-3e1574fe72.json");
 
 async function initMongoDB() {
     try {
         const url = "mongodb://localhost:27017/ecommerce";
-        await mongoose.connect(url, {
+        mongoose.connect(url, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

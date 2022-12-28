@@ -10,7 +10,7 @@ class MongoDb {
         const collectionSchema = new mongoose.Schema(this.schema);
         const collections = mongoose.model(this.collection, collectionSchema);
         const saveObjModel = new collections(object);
-        const save = await saveObjModel.save();
+        const save = await saveObjModel.save(object);
         console.log(save);
     }
 

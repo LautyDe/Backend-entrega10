@@ -1,10 +1,18 @@
 const config = require("../../controllers/config.js");
-const Firebase = require("../../controllers/firebaseController.js");
+const MongoDb = require("../../controllers/mongoController.js");
 
-const products = new Firebase("products");
+const products = new MongoDb("products", {
+    timestamp: { type: String, require: true, max: 15 },
+    code: { type: String, require: true, max: 10 },
+    title: { type: String, require: true, max: 100 },
+    description: { type: String, require: true },
+    price: { type: Number, require: true },
+    thumbnail: { type: String, require: true },
+    stock: { type: Number, require: true },
+});
 
 async function crud() {
-    await config.initFirebase();
+    await config.initMongoDB();
     await products.save({
         timestamp: 1672156514732,
         code: "vGotm6NZk4",
