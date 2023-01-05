@@ -1,15 +1,7 @@
+const mongoose = require("mongoose");
 const config = require("../../controllers/config.js");
 const MongoDb = require("../../controllers/mongoController.js");
-
-const products = new MongoDb("products", {
-    timestamp: { type: String, require: true, max: 15 },
-    code: { type: String, require: true, max: 10 },
-    title: { type: String, require: true, max: 100 },
-    description: { type: String, require: true },
-    price: { type: Number, require: true },
-    thumbnail: { type: String, require: true },
-    stock: { type: Number, require: true },
-});
+const products = require("../models/productsModel.js");
 
 async function crud() {
     await config.initMongoDB();

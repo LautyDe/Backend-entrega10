@@ -5,6 +5,7 @@ const serviceAccount = require("../segundaentregaproyectofinal-firebase-adminsdk
 async function initMongoDB() {
     try {
         const url = "mongodb://localhost:27017/ecommerce";
+        mongoose.set("strictQuery", true);
         mongoose.connect(url, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
